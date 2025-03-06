@@ -1,0 +1,85 @@
+<div class="col-md-6 offset-md-3 my-5">
+    <div class="card border-0 shadow-lg">
+        <div class="card-header bg-gradient-primary text-white text-center py-4">
+            <h3 class="mb-0" style="font-size: 28px; font-family: 'Poppins', sans-serif;">Add Employee</h3>
+        </div>
+        <div class="card-body p-5">
+            <form (ngSubmit)="onSubmit()">
+
+                <!-- First Name Field -->
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" id="firstName"
+                           [(ngModel)]="employee.firstName" name="firstName"
+                           placeholder="Enter first name" required>
+                    <label for="firstName" style="font-size: 16px; font-family: 'Poppins', sans-serif;">
+                        First Name
+                    </label>
+                </div>
+
+                <!-- Last Name Field -->
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" id="lastName"
+                           [(ngModel)]="employee.lastName" name="lastName"
+                           placeholder="Enter last name" required>
+                    <label for="lastName" style="font-size: 16px; font-family: 'Poppins', sans-serif;">
+                        Last Name
+                    </label>
+                </div>
+
+                <!-- Salary Field -->
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" id="salary"
+                           [(ngModel)]="employee.salary" name="salary"
+                           placeholder="Enter salary" required>
+                    <label for="salary" style="font-size: 16px; font-family: 'Poppins', sans-serif;">
+                        Salary
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-lg btn-gradient-primary text-white">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Add custom styles for gradient and animations -->
+<style>
+    /* Gradient Background for Header and Button */
+    .bg-gradient-primary {
+        background: linear-gradient(45deg, cyan, #2575fc);
+    }
+
+    .btn-gradient-primary {
+        background: linear-gradient(45deg, cyan, #2575fc);
+        border: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-gradient-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(106, 17, 203, 0.4);
+    }
+
+    /* Floating Label Focus Effect */
+    .form-floating input:focus ~ label {
+        color: #6a11cb; /* Purple color for focused label */
+    }
+
+    /* Card Hover Effect */
+    .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+</style>
+
+<!-- Include Google Fonts for Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">

@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="height: 95px;">
+    <ul class="navbar-nav mx-auto d-flex align-items-center" style="width: 95%;">
+        <!-- Logo -->
+        <li class="nav-item">
+            <img src="https://mthree.com/site/templates/assets/images/logo.svg?t=1717166775" alt="mthree Logo" style="height: 50px; margin-right: 20px;">
+        </li>
+        <!-- Employee List Link -->
+        <li class="nav-item mx-2">
+            <a routerLink="employees" routerLinkActive="active" class="nav-link" 
+               style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: aliceblue; transition: color 0.3s;">
+                Employee List
+            </a>
+        </li>
+        <!-- Add Employee Link -->
+        <li class="nav-item mx-2">
+            <a routerLink="create-employee" routerLinkActive="active" class="nav-link" 
+               style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: aliceblue; transition: color 0.3s;">
+                Add Employee
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Add some hover effects and active state styling -->
+<style>
+    .nav-link:hover {
+        color: cyan !important; /* Change to cyan on hover */
+    }
+
+    .active {
+        font-weight: bold;
+    }
+</style>
+
+<!-- Main Content Area -->
+<div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white py-4" style="height: 60px;">
+    <div class="container d-flex justify-content-center align-items-center h-100">
+        <span style="font-size: 16px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            &copy; 2025 Shivam Patle. All Rights Reserved.
+        </span>
+    </div>
+</footer>
+
+<!-- Optional: Add a hover effect or additional styling -->
+<style>
+    .footer {
+        border-top: 2px solid cyan; /* Add a cyan border at the top */
+    }
+
+    .footer span {
+        transition: color 0.3s;
+    }
+
+    .footer span:hover {
+        color: cyan; /* Change text color to cyan on hover */
+    }
+</style>
